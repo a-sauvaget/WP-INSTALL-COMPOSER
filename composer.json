@@ -1,0 +1,33 @@
+{
+  "name": "a_sauvaget/wp-install-composer",
+  "description": "Custom Installation of WordPress",
+  "type": "boilerplate",
+  "authors": [
+    {
+      "name": "a-sauvaget",
+      "email": "alexandre.sauvaget44@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": "^5.8",
+    "wpackagist-plugin/query-monitor": "^3.7",
+    "wpackagist-theme/twentytwentyone": "^1.4"
+  },
+  "extra": {
+    "wordpress-install-dir": "wp",
+    "installer-paths": {
+      "content/themes/{$name}": [
+        "type:wordpress-theme"
+      ],
+      "content/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}
