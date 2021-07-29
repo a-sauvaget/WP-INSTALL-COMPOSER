@@ -20,6 +20,7 @@ composer install
    - les infos de connexion à la BDD.
    - Clés de salage (https://api.wordpress.org/secret-key/1.1/salt/)
    - URL de la page d'accueil (`WP_HOME`)
+   - Environnement de développement + activer `WP_DEBUG = true` si besoin.
 
 4. Modifier les droits des dossier avec les commandes:
 
