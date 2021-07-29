@@ -79,9 +79,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define('WP_DEBUG', false);
-// Allow user to download plugin, themes, languages...
-define('FS_METHOD', 'direct');
+define('WP_DEBUG', true);
 
 /* Add any custom values between this line and the "stop editing" line. */
 define('WP_HOME', rtrim('your_url_here/', '/'));
@@ -91,6 +89,24 @@ define('WP_CONTENT_DIR', __DIR__ . '/content');
 
 // Définir l'environnement. Choix disponible: production, staging, development
 define('ENVIRONMENT', 'production');
+
+if (!defined('ENVIRONMENT')) {
+	if (WP_DEBUG) {
+		error_log('The ENVIRONMENT constant is not defined.');
+	}
+} else {
+	if (ENVIRONMENT === 'production') {
+		require __DIR__ . '/wp-config-production.php';
+	} elseif (ENVIRONMENT === 'staging') {
+		require __DIR__ . '/wp-config-staging.php';
+	} elseif (ENVIRONMENT === 'development') {
+		require __DIR__ . '/wp-config-development.php';
+	} else {
+		if (WP_DEBUG) {
+			error_log('The ENVIRONMENT value is not valid');
+		}
+	}
+}
 
 /* That's all, stop editing! Happy publishing. */
 
