@@ -87,12 +87,13 @@ define('WP_SITEURL', WP_HOME . '/wp');
 define('WP_CONTENT_URL', WP_HOME . '/content');
 define('WP_CONTENT_DIR', __DIR__ . '/content');
 
-// Définir l'environnement. Choix disponible: production, staging, development
-define('ENVIRONMENT', 'production');
+//? Définir l'environnement. Choix disponible: production, staging, development
+define('ENVIRONMENT', 'development');
 
 if (!defined('ENVIRONMENT')) {
 	if (WP_DEBUG) {
-		error_log('The ENVIRONMENT constant is not defined.');
+		echo ('The ENVIRONMENT constant is not defined.');
+		die;
 	}
 } else {
 	if (ENVIRONMENT === 'production') {
@@ -103,7 +104,8 @@ if (!defined('ENVIRONMENT')) {
 		require __DIR__ . '/wp-config-development.php';
 	} else {
 		if (WP_DEBUG) {
-			error_log('The ENVIRONMENT value is not valid');
+			echo ('The ENVIRONMENT value is not valid');
+			die;
 		}
 	}
 }
