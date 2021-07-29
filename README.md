@@ -41,5 +41,5 @@ wp core install --prompt
 
 ```bash
 wp language core install fr_FR
-wp language core activate fr_FR
+wp site switch-language fr_FR
 ```
