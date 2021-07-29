@@ -36,3 +36,10 @@ sudo chmod g-w .htaccess
 ```bash
 wp core install --prompt
 ```
+
+6. (Facultatif) Installer la version française de wordpress:
+
+```bash
+wp language core install fr_FR
+wp language core activate fr_FR
+```

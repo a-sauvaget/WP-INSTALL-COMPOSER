@@ -38,3 +38,8 @@ define('EMPTY_TRASH_DAYS', 0); // Désactivation corbeille
  */
 // Déactivation révision
 define('WP_POST_REVISIONS', false);
+
+/**
+ * @link https://wordpress.org/support/article/editing-wp-config-php/#disable-plugin-and-theme-update-and-installation
+ */
+define('DISALLOW_FILE_MODS', false); // Disable plugin and theme update and install

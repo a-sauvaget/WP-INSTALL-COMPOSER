@@ -38,3 +38,8 @@ define('EMPTY_TRASH_DAYS', 60); // 60 days
  */
 // Nombre de révision max par article: 10
 define('WP_POST_REVISIONS', 10);
+
+/**
+ * @link https://wordpress.org/support/article/editing-wp-config-php/#disable-plugin-and-theme-update-and-installation
+ */
+define('DISALLOW_FILE_MODS', true); // Disable plugin and theme update and install
