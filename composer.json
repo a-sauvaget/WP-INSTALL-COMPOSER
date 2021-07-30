@@ -15,9 +15,13 @@
     }
   ],
   "require": {
-    "johnpbloch/wordpress": "^5.8",
-    "wpackagist-plugin/query-monitor": "^3.7",
-    "wpackagist-theme/twentytwentyone": "^1.4"
+    "johnpbloch/wordpress": "*",
+    "wpackagist-plugin/query-monitor": "*",
+    "wpackagist-plugin/advanced-custom-fields": "*",
+    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/wp-smushit": "*",
+    "wpackagist-theme/twentytwentyone": "*"
   },
   "extra": {
     "wordpress-install-dir": "wp",
